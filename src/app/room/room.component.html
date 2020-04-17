@@ -1,0 +1,15 @@
+<div class="chat-box">
+  <ul>
+    <li *ngFor="let item of msgs">
+      <div>{{item.username}}</div>
+      <div>{{item.content}}</div>
+      <i>{{convertDate(item.created_date)}}</i>
+    </li>
+  </ul>
+</div>
+
+<div>
+  <input type="text" [(ngModel)]="content" />
+  <button (click)="send()">Send</button>
+
+</div>
